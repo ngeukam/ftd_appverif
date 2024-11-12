@@ -27,8 +27,7 @@ const firebaseCloudMessaging = {
 				const status = await Notification.requestPermission();
 				if (status && status === "granted") {
 					const fcm_token = await getToken(messaging, {
-						vapidKey:
-							"BL30v4uKT8vRGu2CaShejCPidSYovlE28Z6VKwWJ7y7XyTy4ZI85tQ5R16_bV7Q-qpC5xShLAlXGRQgZ3NjsXQc",
+						vapidKey: process.env.REACT_VAPID_KEY,
 					});
 
 					if (fcm_token) {
@@ -50,8 +49,7 @@ const firebaseCloudMessaging = {
 				const status = await Notification.requestPermission();
 				if (status && status === "granted") {
 					const fcm_token = await getToken(messaging, {
-						vapidKey:
-							"BL30v4uKT8vRGu2CaShejCPidSYovlE28Z6VKwWJ7y7XyTy4ZI85tQ5R16_bV7Q-qpC5xShLAlXGRQgZ3NjsXQc",
+						vapidKey: process.env.REACT_VAPID_KEY,
 					});
 
 					if (fcm_token) {
