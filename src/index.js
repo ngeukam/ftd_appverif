@@ -1,13 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { Toaster } from "react-hot-toast";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import "swiper/swiper-bundle.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { I18nProvider } from "./context/i18n";
+import { UserDataProvider } from "./context/userDataContext";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
   <React.StrictMode>
-    <App />
+      <UserDataProvider>
+        <I18nProvider>
+          <Toaster />
+          <App />
+        </I18nProvider>
+      </UserDataProvider>
   </React.StrictMode>
 );
 

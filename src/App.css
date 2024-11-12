@@ -36,3 +36,34 @@
     transform: rotate(360deg);
   }
 }
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Pour centrer le loader verticalement */
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #fff; /* Couleur de fond */
+  border-top: 6px solid #3498db; /* Couleur du spinner */
+  border-radius: 50%;
+  animation: spin 1s linear infinite; /* Animation */
+}
+
+/* Définition de l'animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@media (max-width: 768px) {
+  .sidebar {
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+  }
+  .sidebar.isOpen {
+    transform: translateX(0);
+  }
+}

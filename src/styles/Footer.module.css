@@ -1,0 +1,26 @@
+/* components/Footer.module.css */
+.footer {
+    background-color: #1e1e1e;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+  }
+  
+  .socialIcons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .socialIcons img {
+    width: 24px;
+    height: 24px;
+    filter: invert(100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .socialIcons a:hover img {
+    transform: scale(1.2);
+  }
+  
